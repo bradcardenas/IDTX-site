@@ -54,6 +54,10 @@ body {
     z-index: 2;
 }
 
+.hero-content h1 span {
+    display: block;
+}
+
 /* =========================
     Services Section
 ============================ */
@@ -1063,6 +1067,12 @@ a {
         font-size: clamp(3rem, 15vw, 5rem);
         letter-spacing: 0.08em;
         line-height: 0.95;
-        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        width: 100%;
+        padding-inline: 20px;
     }
 }
