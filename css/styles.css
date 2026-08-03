@@ -1074,6 +1074,7 @@ a {
 @media (max-width: 768px) {
     .hero-content {
         width: 100%;
-        padding-inline: 20px;
+        max-width:100%;
+        padding-inline: 12px;
     }
 }
