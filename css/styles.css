@@ -1032,36 +1032,65 @@ a {
     background: #ffffff;
 }
 
-/* Two-Story deck Layout */
+/* Two-story deck layout */
+
+.gallery-grid-deck {
+    align-items: start;
+}
 
 .gallery-grid-deck .gallery-item-wide {
-    grid-columm: span 7;
+    grid-column: 1 / span 7;
 }
 
 .gallery-grid-deck .gallery-item:nth-child(2) {
-    grid-column: span 5;
+    grid-column: 8 / -1;
 }
 
 .gallery-grid-deck .gallery-item:nth-child(3) {
     grid-column: 3 / span 8;
-    margin-top: 10px;
+    margin-top: 26px;
 }
 
-/* Large featured photographs */
+/* =========================================
+   PROJECT HEADING HIERARCHY
+========================================= */
 
-.gallery-item-full {
-    grid-column: 1 / -1;
+.gallery-project-heading {
+    max-width: 840px;
+    margin-bottom: 38px;
 }
 
-.gallery-item-full img {
-    height: min(72vh, 760px);
+.gallery-project-heading .section-label {
+    margin-bottom: 12px;
 }
 
-/* Stair image */
+.gallery-project-heading h2 {
+    margin: 0 0 18px;
 
-.gallery-grid-stairs .gallery-item-full {
-    width: min(1050px, 100%);
-    margin: 0 auto;
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 0.96;
+    letter-spacing: -0.04em;
+}
+
+.gallery-project-heading > p:last-child {
+    max-width: 720px;
+    margin: 0;
+
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: #5b5852;
+}
+
+.gallery-item figcaption {
+    min-height: 68px;
+    padding: 16px 18px 18px;
+
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #55514b;
+
+    border-top: 1px solid rgba(32, 32, 30, 0.1);
+    background: #ffffff;
 }
 
 /* =========================================
@@ -1147,6 +1176,27 @@ a {
 .projects-footer a {
     color: inherit;
     text-decoration: none;
+}
+
+/* =========================================
+   PROJECTS PAGE — IMAGE CORRECTIONS
+========================================= */
+
+/*
+The Alexander photographs document the construction process.
+Showing the whole frame is more important than forcing each image
+into an identical crop.
+*/
+
+.gallery-grid-deck .gallery-item img {
+    width: 100%;
+    height: auto;
+    max-height: none;
+
+    object-fit: contain;
+    object-position: center;
+
+    background: #ded9d0;
 }
 
 /* =================================
